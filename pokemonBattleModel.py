@@ -14,7 +14,7 @@ j=0
 for i in dataCombat.values:
     dataMatch.loc[j]=(dataPokemon[dataPokemon['#']==i[0]]['HP'].values[0],dataPokemon[dataPokemon['#']==i[0]]['Attack'].values[0],dataPokemon[dataPokemon['#']==i[0]]['Defense'].values[0],dataPokemon[dataPokemon['#']==i[0]]['Sp. Atk'].values[0],dataPokemon[dataPokemon['#']==i[0]]['Sp. Def'].values[0],dataPokemon[dataPokemon['#']==i[0]]['Speed'].values[0],dataPokemon[dataPokemon['#']==i[1]]['HP'].values[0],dataPokemon[dataPokemon['#']==i[1]]['Attack'].values[0],dataPokemon[dataPokemon['#']==i[1]]['Defense'].values[0],dataPokemon[dataPokemon['#']==i[1]]['Sp. Atk'].values[0],dataPokemon[dataPokemon['#']==i[1]]['Sp. Def'].values[0],dataPokemon[dataPokemon['#']==i[1]]['Speed'].values[0])
     j+=1
-    if j==750:
+    if j==1000:
         break
     # print(dataMatch.iloc[0])
     # break
@@ -27,7 +27,7 @@ for i in dataCombat['Winner']:
     else:
         dataCombat.iloc[j]['Winner']=0
         j+=1
-target=dataCombat['Winner'].iloc[0:750]
+target=dataCombat['Winner'].iloc[0:1000]
 
 print(target)
 print(dataMatch)
